@@ -1,3 +1,33 @@
+<style>
+.other-conversation-section {
+  padding-left:0;
+  padding-right:0;
+}
+
+.conversation-card {
+  border: 1px solid;
+  border-color: rgba(213, 213, 213, 1);
+}
+
+.conversation-card-title {
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.conversation-card-content{
+  padding-top: 7px;
+}
+
+.conversation-card p{
+  padding-left:10px;
+}
+
+</style>
+
 <div class="container-fluid" >
   <% if request.host == "thinqtv.herokuapp.com" %>
 
@@ -122,6 +152,32 @@
         <% if @events.present? %>
           <%= render 'layouts/maincalendar', collection: @events %><br>
         <% end %>
+      </div>
+
+      <div style='margin-top: 3rem;'>
+        <h4>Check out other conversations that are going on right now</h4>
+
+        <div class="row other-conversation-section">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="conversation-card">
+              <div class="conversation-card-title">
+                <a id='calendar-event'>Lisa Schaefer</a>
+                <div class="conversation-card-title-time">
+                  <p style='margin-bottom: 0'>Thu, May 28</p>
+                  <p>10:00 PM Eastern Daylight Time<p>
+                </div>  <!-- conversation-card-title-time -->
+              </div> <!-- conversation-card-title -->
+
+              <div class="conversation-card-content">
+                <p>Let's talk about Immigration</p>
+              </div> <!-- conversation-card-content -->
+
+              <div class="conversation-card-actions">
+                <button class="btn btn-outline-danger">Join conversation right now</button>
+              </div> <!-- conversation-card-actions -->
+            </div> <!-- conversation-card -->
+          </div>
+        </div>
       </div>
     </div>
   <% end %>

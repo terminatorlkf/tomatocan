@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     usersvidorder = userswithyoutube.order('updated_at DESC')
     @youtubers = usersvidorder.paginate(:page => params[:page], :per_page => 12)
   end
+  
   def supportourwork
     userswstripe = User.where("LENGTH(stripeid) > ? AND LENGTH(youtube1) > ?", 10, 7)
     stripeorder = userswstripe.order('updated_at DESC')
