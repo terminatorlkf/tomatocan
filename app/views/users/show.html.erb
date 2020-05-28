@@ -1,5 +1,5 @@
 <style>
-.other-conversation-section {
+/* .other-conversation-section {
   padding-left:0;
   padding-right:0;
 }
@@ -36,7 +36,7 @@
 
 .conversation-card p{
   padding-left:10px;
-}
+} */
 
 </style>
 
@@ -170,6 +170,7 @@
         <h4>Check out other conversations that are going on right now</h4>
 
         <div class="row other-conversation-section">
+        <ul class="list-group">
           <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="conversation-card">
               <div class="conversation-card-title">
@@ -185,11 +186,12 @@
               </div> <!-- conversation-card-content -->
 
               <div class="conversation-card-actions">
-                <button>Join conversation right now</button>
+                <button class="btn btn-primary">Join conversation right now</button>
               </div> <!-- conversation-card-actions -->
             </div> <!-- conversation-card -->
           </div>
         </div>
+      <ul>
       </div>
     </div>
   <% end %>
